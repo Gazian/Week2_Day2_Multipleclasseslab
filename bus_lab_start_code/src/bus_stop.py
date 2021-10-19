@@ -10,4 +10,5 @@ class BusStop:
     def add_to_queue(self,passenger):
         self.queue.append(passenger)
 
-    
+    def clear(self):
+        self.queue.clear()

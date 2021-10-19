@@ -1,3 +1,5 @@
+from src.bus_stop import BusStop
+
 class Bus:
     def __init__(self,route_number,destination):
         self.route_number = route_number
@@ -18,7 +20,8 @@ class Bus:
 
     def empty(self):
         self.passengers.clear()
-    
-    
 
-
+    def pick_up_from_stop(self,bus_stop_1):
+        for passenger in bus_stop_1.queue:
+            self.passengers.append(passenger)
+        bus_stop_1.clear()
